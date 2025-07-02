@@ -7,7 +7,7 @@ const getManga = async (req, res) => {
     const { orderby, category_name, genre, genre2, status } = req.query;
     const page = req.params.page || 1;
     
-    const apiUrl = `https://api.komiku.id/manga/page/${page}/?orderby=${orderby || ''}&category_name=${category_name || ''}&genre=${genre || ''}&genre2=${genre2 || ''}&status=${status || ''}`;
+    const apiUrl = `https://api.komiku.org/manga/page/${page}/?orderby=${orderby || ''}&category_name=${category_name || ''}&genre=${genre || ''}&genre2=${genre2 || ''}&status=${status || ''}`;
 
     console.log("Fetching URL:", apiUrl);
 
@@ -65,7 +65,7 @@ const getMangaGenre = async (req, res) => {
     const { orderby, category_name } = req.query;
     const page = req.params.page || 1;
 
-    const apiUrl = `https://api.komiku.id/genre/${genre}/page/${page}/?orderby=${orderby || ''}&category_name=${category_name || ''}`;
+    const apiUrl = `https://api.komiku.org/genre/${genre}/page/${page}/?orderby=${orderby || ''}&category_name=${category_name || ''}`;
 
     console.log("Fetching URL:", apiUrl);
 
@@ -122,7 +122,7 @@ const searchManga = async (req, res) => {
     const { post_type, s } = req.query;
     const page = req.params.page || 1;
 
-    const apiUrl = `https://api.komiku.id/page/${page}/?post_type=${post_type || 'manga'}&s=${s || ''}`;
+    const apiUrl = `https://api.komiku.org/page/${page}/?post_type=${post_type || 'manga'}&s=${s || ''}`;
 
     try {
         const response = await axios.get(apiUrl, {
@@ -296,7 +296,7 @@ const getAllManga = async (req, res) => {
     const page = parseInt(req.query.page) || 1;
     const perPage = 10;
 
-    const apiUrl = "https://komiku.id/daftar-komik/";
+    const apiUrl = "https://komiku.org/daftar-komik/";
 
     try {
         const response = await axios.get(apiUrl, {
