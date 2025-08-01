@@ -1,5 +1,5 @@
 const baseUrl = {
-    anime: "https://otakudesu.cloud/",
+    anime: "https://otakudesu.best/",
     manga: "https://komiku.org/",
     anichin: "https://anichin.cafe/",
 }
